@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800');
+
+:root {
+  --border-radius: 20px;
+}
+
+* {
+  font-family: 'JetBrains Mono', monospace;
+  -webkit-user-drag: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------------------------- */
+.vizitka-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  /*width: fit-content;*/
+}
+
+.vizitka {
+  display: flex;
+  flex-flow: column wrap;
+
+  margin: 10px;
+
+  border-radius: var(--border-radius);
+  box-shadow: 10px 10px var(--border-radius) rgba(0, 0, 0, 0.5);
+}
+
+.bg-top {
+  padding: 30px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background: linear-gradient(10deg, blue, red);
+}
+
+.bg-bottom {
+  padding: 30px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  background: black;
+}
+
+.bg-bottom * {
+  color: white;
+}
+
+.hlavicka, .o-mne, .dovednosti, .paticka {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* --- HLAVICKA --- */
+
+.hlavicka img {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hlavicka h2 {
+  font-size: 2rem;
+}
+
+/* --- DOVEDNOSTI --- */
