@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800');
 
 :root {
-  --border-radius: 20px;
+  --border-radius: 2rem;
 }
 
 * {
@@ -9,43 +9,52 @@
   -webkit-user-drag: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 3rem;
-  margin-bottom: 0;
+html {
+  font-size: 12px;
 }
 
-ul {
-  list-style: none;
+body {
+  scroll-behavior: smooth;
+  padding: 1vw 10vw;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 /* ---------------------------- */
 .vizitka-wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
 
-  /*width: fit-content;*/
+  gap: 5rem;
 }
 
 .vizitka {
   display: flex;
   flex-flow: column wrap;
 
-  margin: 10px;
-
+  width: 35rem;
   border-radius: var(--border-radius);
-  box-shadow: 10px 10px var(--border-radius) rgba(0, 0, 0, 0.5);
+  box-shadow: 1rem 1rem var(--border-radius) rgba(0, 0, 0, 0.5);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.vizitka:hover {
+  transform: scale(1.03);
 }
 
 .bg-top {
-  padding: 30px;
+  padding: 3rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   background: linear-gradient(10deg, blue, red);
 }
 
 .bg-bottom {
-  padding: 30px;
+  padding: 3rem;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   background: black;
@@ -57,21 +66,80 @@ ul {
 
 .hlavicka, .o-mne, .dovednosti, .paticka {
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
+}
+
+.o-mne, .dovednosti, .paticka {
   align-items: center;
 }
 
 /* --- HLAVICKA --- */
+.hlavicka {
+  padding: 0 1.5rem;
+}
 
 .hlavicka img {
-  width: 50%;
+  width: 40%;
   height: auto;
   border-radius: 50%;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 1rem 1rem var(--border-radius) rgba(0, 0, 0, 0.5);
+
+  margin: 0 30%;
+}
+
+.hlavicka h1 {
+  margin-top: 1.5rem;
+  font-size: 3.5rem;
 }
 
 .hlavicka h2 {
+  margin-top: 1rem;
   font-size: 2rem;
+
+}
+
+/* --- O MNE --- */
+.o-mne h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.o-mne p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
 /* --- DOVEDNOSTI --- */
+.dovednosti h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.dovednosti ul li {
+  font-size: 1.2rem;
+}
+
+/* --- PATICKA --- */
+.paticka ul {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.paticka ul li a {
+  border: none;
+  background: none;
+}
+
+.paticka ul li a:hover {
+  cursor: pointer;
+}
+
+.paticka ul li a img {
+  height: 3rem;
+  width: auto;
+}
