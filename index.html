@@ -4,63 +4,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fr</title>
+  <title>Fr fr 67</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 <main>
-  <div class="vizitka-wrapper">
+  <div class="vizitka">
 
-    <div class="vizitka">
+    <div class="bg-top">
+      <div class="hlavicka">
+        <img src="img/ProfilePic.jpg" alt="Vizitka">
+        <h1>Ludek Vecsey</h1>
+        <h2>Profesionalni reel sender</h2>
+      </div>
+    </div>
 
-      <div class="bg-top">
-        <div class="hlavicka">
-          <img src="img/ProfilePic.jpg" alt="Vizitka">
-          <h1>Ludek Vecsey</h1>
-          <h2>Profesionalni reel sender</h2>
+    <div class="bg-bottom">
+      <div class="o-mne">
+        <h1>O mne</h1>
+        <p>jsem vylozene batman</p>
+      </div>
+
+      <div class="dovednosti">
+        <h1>Dovednosti</h1>
+        <div>
+          <p>Posilani reelu</p>
+          <p>Obcasne programovani</p>
+          <p>Prokrastinace nejvyssiho levelu</p>
         </div>
       </div>
 
-      <div class="bg-bottom">
-        <div class="o-mne">
-          <h1>O mne</h1>
-          <p>jsem vylozene batman</p>
-        </div>
-
-        <div class="dovednosti">
-          <h1>Dovednosti</h1>
-          <ul>
-            <li>Posilani reelu</li>
-            <li>Obcasne programovani</li>
-            <li>Prokrastinace nejvyssiho levelu</li> <!-- TODO -->
-          </ul>
-        </div>
-
-        <div class="paticka">
-          <ul>
-            <li>
-              <a href="https://github.com/pocolor/" target="_blank">
-                <img src="img/github.svg" alt="GitHub">
-              </a>
-            </li>
-          </ul>
-        </div>
-
+      <div class="paticka">
+        <ul>
+          <li>
+            <button class="batman" onclick="alert('Batman')">
+              <img src="img/batman-icon.webp" alt="Batman">
+            </button>
+          </li>
+          <li>
+            <a href="https://github.com/pocolor/" target="_blank">
+              <img src="img/github.svg" alt="GitHub">
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
 
   </div>
 </main>
+
 </body>
 
 <script>
-  const wrapper = document.querySelector('.vizitka-wrapper');
-  const original = document.querySelector('.vizitka');
+  const container = document.querySelector('main');
+  const vizitka = document.querySelector('.vizitka');
 
   for (let i = 0; i < 100; i++) {
-    wrapper.appendChild(original.cloneNode(true));
+    container.appendChild(vizitka.cloneNode(true));
   }
 </script>
 
