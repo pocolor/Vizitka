@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* ---------------------------- */
 main {
   display: grid;
-  grid-template-columns: repeat(calc(100vw / (var(--vizitka-width) + var(--vizitka-margin)) - 0.5), var(--vizitka-width));
+  grid-template-columns: repeat(auto-fit, var(--vizitka-width));
   justify-content: center;
   gap: var(--vizitka-margin);
   margin: calc(var(--vizitka-margin) / 2) 0;
